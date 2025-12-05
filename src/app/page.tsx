@@ -25,6 +25,10 @@ import {
   Phone,
   ExternalLink,
   LogIn,
+  Award,
+  Warehouse,
+  BarChart3,
+  Users,
 } from "lucide-react";
 
 export default function Home() {
@@ -165,6 +169,14 @@ export default function Home() {
                 Why Us
               </a>
               <a
+                href="#about"
+                className={`font-medium transition-colors hover:text-[#00A0D2] ${
+                  scrolled ? "text-[#5A5A5A]" : "text-white"
+                }`}
+              >
+                About
+              </a>
+              <a
                 href="#contact"
                 className={`font-medium transition-colors hover:text-[#00A0D2] ${
                   scrolled ? "text-[#5A5A5A]" : "text-white"
@@ -230,6 +242,13 @@ export default function Home() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Why Us
+              </a>
+              <a
+                href="#about"
+                className="block text-[#5A5A5A] font-medium"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                About
               </a>
               <a
                 href="#contact"
@@ -474,6 +493,141 @@ export default function Home() {
                     </span>
                   ))}
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Meet The Founder Section */}
+      <section id="about" className="py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Photo/Visual Side */}
+            <div className="relative">
+              <div className="bg-gradient-to-br from-[#5A5A5A] to-[#3D3D3D] rounded-3xl p-8 lg:p-12 relative overflow-hidden">
+                {/* Decorative elements */}
+                <div className="absolute top-0 right-0 w-full h-full opacity-10">
+                  <svg viewBox="0 0 400 400" className="w-full h-full">
+                    <path
+                      d="M0,200 Q100,100 200,200 T400,100"
+                      fill="none"
+                      stroke="#A89F91"
+                      strokeWidth="40"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                </div>
+                <div className="relative z-10 text-center">
+                  <div className="w-32 h-32 mx-auto bg-[#00A0D2] rounded-full flex items-center justify-center mb-6">
+                    <Users className="w-16 h-16 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-2">J. Seal</h3>
+                  <p className="text-[#00A0D2] font-semibold mb-4">Founder & President</p>
+                  <div className="flex flex-wrap justify-center gap-3">
+                    <span className="bg-white/10 backdrop-blur px-4 py-2 rounded-full text-white text-sm">
+                      18+ Years Experience
+                    </span>
+                    <span className="bg-white/10 backdrop-blur px-4 py-2 rounded-full text-white text-sm">
+                      Logistics Expert
+                    </span>
+                  </div>
+                </div>
+              </div>
+              {/* Floating stat cards */}
+              <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-4 hidden lg:block">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 bg-[#00A0D2]/10 rounded-xl flex items-center justify-center">
+                    <Award className="w-6 h-6 text-[#00A0D2]" />
+                  </div>
+                  <div>
+                    <p className="text-2xl font-bold text-[#5A5A5A]">18+</p>
+                    <p className="text-sm text-gray-500">Years in Logistics</p>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute -top-6 -right-6 bg-white rounded-2xl shadow-xl p-4 hidden lg:block">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 bg-[#00A0D2]/10 rounded-xl flex items-center justify-center">
+                    <Warehouse className="w-6 h-6 text-[#00A0D2]" />
+                  </div>
+                  <div>
+                    <p className="text-2xl font-bold text-[#5A5A5A]">Hands-On</p>
+                    <p className="text-sm text-gray-500">Operations Expert</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Content Side */}
+            <div>
+              <span className="inline-block bg-[#00A0D2]/10 text-[#00A0D2] px-4 py-1.5 rounded-full text-sm font-semibold uppercase tracking-wider mb-4">
+                Meet The Founder
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#5A5A5A] mb-6">
+                Nearly Two Decades of
+                <br />
+                <span className="text-[#00A0D2]">Real-World Experience</span>
+              </h2>
+              <p className="text-lg text-gray-600 mb-6">
+                KHCL Logistics isn&apos;t run from behind a desk—it&apos;s built on
+                almost 20 years of hands-on experience in the trenches of supply chain
+                and logistics operations.
+              </p>
+              <p className="text-gray-600 mb-8">
+                From managing warehouse floors to optimizing freight flow, from organizing
+                inventory systems to streamlining material movement—our founder has done it all.
+                This deep operational knowledge means we understand your challenges from the
+                inside out, not just on paper.
+              </p>
+
+              <div className="grid sm:grid-cols-2 gap-4 mb-8">
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 bg-[#00A0D2]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Truck className="w-5 h-5 text-[#00A0D2]" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-[#5A5A5A]">Freight Movement</h4>
+                    <p className="text-sm text-gray-500">End-to-end material flow optimization</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 bg-[#00A0D2]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Warehouse className="w-5 h-5 text-[#00A0D2]" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-[#5A5A5A]">Warehouse Operations</h4>
+                    <p className="text-sm text-gray-500">Layout, organization & efficiency</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 bg-[#00A0D2]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <BarChart3 className="w-5 h-5 text-[#00A0D2]" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-[#5A5A5A]">Inventory Management</h4>
+                    <p className="text-sm text-gray-500">Systems that work in the real world</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 bg-[#00A0D2]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Package className="w-5 h-5 text-[#00A0D2]" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-[#5A5A5A]">Supply Chain</h4>
+                    <p className="text-sm text-gray-500">Complete logistics coordination</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-[#5A5A5A] text-white p-6 rounded-2xl">
+                <p className="italic text-white/90 mb-4">
+                  &quot;When you work with KHCL, you&apos;re not getting someone who just
+                  learned logistics from a textbook. You&apos;re getting decades of real
+                  experience—someone who&apos;s loaded trucks, managed warehouses, and
+                  understands exactly what it takes to get your freight where it needs to be.&quot;
+                </p>
+                <p className="text-[#00A0D2] font-semibold">— J. Seal, Founder</p>
               </div>
             </div>
           </div>
