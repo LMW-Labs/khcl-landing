@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import {
   Truck,
   Package,
@@ -132,49 +133,46 @@ export default function Home() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <a href="#" className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center text-white font-bold text-lg">
-                K
-              </div>
-              <span
-                className={`font-bold text-xl ${
-                  scrolled ? "text-[#1e3a5f]" : "text-white"
-                }`}
-              >
-                KHCL Logistics
-              </span>
+          <div className="flex items-center justify-between h-20">
+            <a href="#" className="flex items-center gap-3">
+              <Image
+                src="/logo.jpg"
+                alt="KHCL Logistics"
+                width={160}
+                height={50}
+                className="h-12 w-auto"
+              />
             </a>
 
             {/* Desktop Nav */}
             <div className="hidden md:flex items-center gap-8">
               <a
                 href="#services"
-                className={`font-medium transition-opacity hover:opacity-80 ${
-                  scrolled ? "text-gray-700" : "text-white"
+                className={`font-medium transition-colors hover:text-[#00A0D2] ${
+                  scrolled ? "text-[#5A5A5A]" : "text-white"
                 }`}
               >
                 Services
               </a>
               <a
                 href="#why-us"
-                className={`font-medium transition-opacity hover:opacity-80 ${
-                  scrolled ? "text-gray-700" : "text-white"
+                className={`font-medium transition-colors hover:text-[#00A0D2] ${
+                  scrolled ? "text-[#5A5A5A]" : "text-white"
                 }`}
               >
                 Why Us
               </a>
               <a
                 href="#contact"
-                className={`font-medium transition-opacity hover:opacity-80 ${
-                  scrolled ? "text-gray-700" : "text-white"
+                className={`font-medium transition-colors hover:text-[#00A0D2] ${
+                  scrolled ? "text-[#5A5A5A]" : "text-white"
                 }`}
               >
                 Contact
               </a>
               <a
                 href="#contact"
-                className="px-6 py-2.5 bg-orange-500 text-white rounded-lg font-semibold hover:bg-orange-600 transition-colors"
+                className="px-6 py-2.5 bg-[#00A0D2] text-white rounded-lg font-semibold hover:bg-[#0088B5] transition-colors"
               >
                 Get a Quote
               </a>
@@ -188,13 +186,13 @@ export default function Home() {
               {mobileMenuOpen ? (
                 <X
                   className={`w-6 h-6 ${
-                    scrolled ? "text-[#1e3a5f]" : "text-white"
+                    scrolled ? "text-[#5A5A5A]" : "text-white"
                   }`}
                 />
               ) : (
                 <Menu
                   className={`w-6 h-6 ${
-                    scrolled ? "text-[#1e3a5f]" : "text-white"
+                    scrolled ? "text-[#5A5A5A]" : "text-white"
                   }`}
                 />
               )}
@@ -208,28 +206,28 @@ export default function Home() {
             <div className="px-4 py-4 space-y-4">
               <a
                 href="#services"
-                className="block text-gray-700 font-medium"
+                className="block text-[#5A5A5A] font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Services
               </a>
               <a
                 href="#why-us"
-                className="block text-gray-700 font-medium"
+                className="block text-[#5A5A5A] font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Why Us
               </a>
               <a
                 href="#contact"
-                className="block text-gray-700 font-medium"
+                className="block text-[#5A5A5A] font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Contact
               </a>
               <a
                 href="#contact"
-                className="block w-full text-center px-6 py-2.5 bg-orange-500 text-white rounded-lg font-semibold"
+                className="block w-full text-center px-6 py-2.5 bg-[#00A0D2] text-white rounded-lg font-semibold"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Get a Quote
@@ -240,25 +238,40 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="min-h-screen bg-gradient-to-br from-[#1e3a5f] to-[#0f2744] relative overflow-hidden flex items-center">
-        <div
-          className="absolute inset-0 opacity-5"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-          }}
-        />
+      <section className="min-h-screen bg-gradient-to-br from-[#5A5A5A] to-[#3D3D3D] relative overflow-hidden flex items-center">
+        {/* Decorative swoosh element inspired by logo */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 right-0 w-[80%] h-[60%] opacity-10">
+            <svg viewBox="0 0 800 400" className="w-full h-full">
+              <path
+                d="M0,200 Q200,50 400,100 T800,50"
+                fill="none"
+                stroke="#A89F91"
+                strokeWidth="120"
+                strokeLinecap="round"
+              />
+              <path
+                d="M0,300 Q200,150 400,200 T800,150"
+                fill="none"
+                stroke="#A89F91"
+                strokeWidth="80"
+                strokeLinecap="round"
+              />
+            </svg>
+          </div>
+        </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 relative z-10">
           <div className="text-center text-white">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur px-5 py-2 rounded-full text-sm font-medium mb-6">
-              <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse-dot" />
+              <span className="w-2 h-2 bg-[#00A0D2] rounded-full animate-pulse-dot" />
               Licensed &amp; Bonded Freight Broker
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
               Your Freight,
               <br />
-              <span className="text-orange-500">Delivered Right.</span>
+              <span className="text-[#00A0D2]">Delivered Right.</span>
             </h1>
-            <p className="text-xl text-blue-100 max-w-2xl mx-auto mb-10">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-10">
               KHCL Logistics connects shippers with reliable carriers across the
               USA. From dry van to specialized freight, we handle it all with
               precision and care.
@@ -266,14 +279,14 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-orange-500 text-white rounded-lg font-semibold hover:bg-orange-600 transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-orange-500/30"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#00A0D2] text-white rounded-lg font-semibold hover:bg-[#0088B5] transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#00A0D2]/30"
               >
                 Get a Free Quote
                 <ArrowRight className="w-5 h-5" />
               </a>
               <a
                 href="tel:"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-transparent text-white border-2 border-white rounded-lg font-semibold hover:bg-white/10 transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-transparent text-white border-2 border-[#A89F91] rounded-lg font-semibold hover:bg-[#A89F91]/20 transition-colors"
               >
                 <Phone className="w-5 h-5" />
                 Call Us Now
@@ -283,20 +296,20 @@ export default function Home() {
             {/* Stats */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-20 pt-10 border-t border-white/10">
               <div className="text-center">
-                <div className="text-4xl font-bold text-orange-500">48</div>
-                <div className="text-sm text-blue-200 uppercase tracking-wider mt-1">
+                <div className="text-4xl font-bold text-[#00A0D2]">48</div>
+                <div className="text-sm text-[#A89F91] uppercase tracking-wider mt-1">
                   States Covered
                 </div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-orange-500">24/7</div>
-                <div className="text-sm text-blue-200 uppercase tracking-wider mt-1">
+                <div className="text-4xl font-bold text-[#00A0D2]">24/7</div>
+                <div className="text-sm text-[#A89F91] uppercase tracking-wider mt-1">
                   Support Available
                 </div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-orange-500">100%</div>
-                <div className="text-sm text-blue-200 uppercase tracking-wider mt-1">
+                <div className="text-4xl font-bold text-[#00A0D2]">100%</div>
+                <div className="text-sm text-[#A89F91] uppercase tracking-wider mt-1">
                   Commitment
                 </div>
               </div>
@@ -306,27 +319,27 @@ export default function Home() {
       </section>
 
       {/* Credentials Bar */}
-      <div className="bg-[#0f2744] py-6">
+      <div className="bg-[#3D3D3D] py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center items-center gap-6 md:gap-12 text-white/80 text-sm">
             <div className="flex items-center gap-2">
-              <CheckCircle className="w-5 h-5 text-green-400" />
+              <CheckCircle className="w-5 h-5 text-[#00A0D2]" />
               <span>
                 MC# <strong className="text-white">123853</strong>
               </span>
             </div>
             <div className="flex items-center gap-2">
-              <CheckCircle className="w-5 h-5 text-green-400" />
+              <CheckCircle className="w-5 h-5 text-[#00A0D2]" />
               <span>
                 USDOT# <strong className="text-white">3177936</strong>
               </span>
             </div>
             <div className="flex items-center gap-2">
-              <Shield className="w-5 h-5 text-green-400" />
+              <Shield className="w-5 h-5 text-[#00A0D2]" />
               <strong className="text-white">Licensed &amp; Bonded</strong>
             </div>
             <div className="flex items-center gap-2">
-              <MapPin className="w-5 h-5 text-green-400" />
+              <MapPin className="w-5 h-5 text-[#00A0D2]" />
               <span>
                 Florence, <strong className="text-white">Mississippi</strong>
               </span>
@@ -336,13 +349,13 @@ export default function Home() {
       </div>
 
       {/* Services Section */}
-      <section id="services" className="py-24 bg-slate-50">
+      <section id="services" className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="inline-block bg-orange-100 text-orange-600 px-4 py-1.5 rounded-full text-sm font-semibold uppercase tracking-wider mb-4">
+            <span className="inline-block bg-[#00A0D2]/10 text-[#00A0D2] px-4 py-1.5 rounded-full text-sm font-semibold uppercase tracking-wider mb-4">
               Our Services
             </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#1e3a5f] mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#5A5A5A] mb-4">
               Freight Solutions for Every Need
             </h2>
             <p className="text-lg text-gray-600">
@@ -356,12 +369,12 @@ export default function Home() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+                className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-[#1e3a5f] to-[#0f2744] rounded-2xl flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#5A5A5A] to-[#3D3D3D] rounded-2xl flex items-center justify-center mb-6 group-hover:from-[#00A0D2] group-hover:to-[#0088B5] transition-all duration-300">
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-[#1e3a5f] mb-3">
+                <h3 className="text-xl font-bold text-[#5A5A5A] mb-3">
                   {service.title}
                 </h3>
                 <p className="text-gray-600">{service.description}</p>
@@ -376,10 +389,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="inline-block bg-orange-100 text-orange-600 px-4 py-1.5 rounded-full text-sm font-semibold uppercase tracking-wider mb-4">
+              <span className="inline-block bg-[#00A0D2]/10 text-[#00A0D2] px-4 py-1.5 rounded-full text-sm font-semibold uppercase tracking-wider mb-4">
                 Why KHCL
               </span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e3a5f] mb-6">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#5A5A5A] mb-6">
                 Built on Trust,
                 <br />
                 Driven by Results
@@ -393,11 +406,11 @@ export default function Home() {
               <div className="space-y-6">
                 {whyUs.map((item, index) => (
                   <div key={index} className="flex gap-4">
-                    <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <item.icon className="w-6 h-6 text-orange-500" />
+                    <div className="w-12 h-12 bg-[#00A0D2]/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <item.icon className="w-6 h-6 text-[#00A0D2]" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-[#1e3a5f] mb-1">
+                      <h4 className="font-bold text-[#5A5A5A] mb-1">
                         {item.title}
                       </h4>
                       <p className="text-gray-600 text-sm">
@@ -409,21 +422,35 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-[#1e3a5f] to-[#0f2744] rounded-3xl p-10 text-white">
-              <h3 className="text-2xl font-bold mb-4">We Move What Matters</h3>
-              <p className="text-blue-100 mb-8">
-                Our diverse experience spans across industries and commodity
-                types:
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {commodities.map((commodity, index) => (
-                  <span
-                    key={index}
-                    className="bg-white/15 backdrop-blur px-4 py-2 rounded-full text-sm"
-                  >
-                    {commodity}
-                  </span>
-                ))}
+            <div className="bg-gradient-to-br from-[#5A5A5A] to-[#3D3D3D] rounded-3xl p-10 text-white relative overflow-hidden">
+              {/* Decorative taupe swoosh */}
+              <div className="absolute top-0 right-0 w-full h-full opacity-20">
+                <svg viewBox="0 0 400 400" className="w-full h-full">
+                  <path
+                    d="M400,0 Q300,100 350,200 T400,400"
+                    fill="none"
+                    stroke="#A89F91"
+                    strokeWidth="60"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </div>
+              <div className="relative z-10">
+                <h3 className="text-2xl font-bold mb-4">We Move What Matters</h3>
+                <p className="text-gray-300 mb-8">
+                  Our diverse experience spans across industries and commodity
+                  types:
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {commodities.map((commodity, index) => (
+                    <span
+                      key={index}
+                      className="bg-[#A89F91]/30 backdrop-blur px-4 py-2 rounded-full text-sm border border-[#A89F91]/30"
+                    >
+                      {commodity}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -431,26 +458,36 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-br from-[#1e3a5f] to-[#0f2744] relative overflow-hidden">
-        <div className="absolute -top-1/2 -right-1/4 w-[600px] h-[600px] bg-orange-500 rounded-full opacity-10" />
+      <section className="py-24 bg-gradient-to-br from-[#5A5A5A] to-[#3D3D3D] relative overflow-hidden">
+        <div className="absolute -top-1/2 -right-1/4 w-[600px] h-[600px] bg-[#00A0D2] rounded-full opacity-10" />
+        <div className="absolute bottom-0 left-0 w-full h-32 opacity-10">
+          <svg viewBox="0 0 1200 100" className="w-full h-full" preserveAspectRatio="none">
+            <path
+              d="M0,50 Q300,0 600,50 T1200,50"
+              fill="none"
+              stroke="#A89F91"
+              strokeWidth="40"
+            />
+          </svg>
+        </div>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Ready to Ship?
           </h2>
-          <p className="text-xl text-blue-100 mb-10">
+          <p className="text-xl text-gray-300 mb-10">
             Get a competitive quote within hours. Our team is standing by to
             handle your next load with the care and professionalism it deserves.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#contact"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-orange-500 text-white rounded-lg font-semibold hover:bg-orange-600 transition-all hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#00A0D2] text-white rounded-lg font-semibold hover:bg-[#0088B5] transition-all hover:-translate-y-0.5"
             >
               Request a Quote
             </a>
             <a
               href="tel:"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-transparent text-white border-2 border-white rounded-lg font-semibold hover:bg-white/10 transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-transparent text-white border-2 border-[#A89F91] rounded-lg font-semibold hover:bg-[#A89F91]/20 transition-colors"
             >
               Call Now
             </a>
@@ -459,14 +496,14 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 bg-slate-50">
+      <section id="contact" className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16">
             <div>
-              <span className="inline-block bg-orange-100 text-orange-600 px-4 py-1.5 rounded-full text-sm font-semibold uppercase tracking-wider mb-4">
+              <span className="inline-block bg-[#00A0D2]/10 text-[#00A0D2] px-4 py-1.5 rounded-full text-sm font-semibold uppercase tracking-wider mb-4">
                 Get in Touch
               </span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e3a5f] mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#5A5A5A] mb-4">
                 Let&apos;s Move Your Freight
               </h2>
               <p className="text-lg text-gray-600 mb-10">
@@ -478,22 +515,22 @@ export default function Home() {
               <div className="space-y-6">
                 <div className="flex gap-4">
                   <div className="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-6 h-6 text-orange-500" />
+                    <MapPin className="w-6 h-6 text-[#00A0D2]" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-[#1e3a5f] mb-1">Location</h4>
+                    <h4 className="font-bold text-[#5A5A5A] mb-1">Location</h4>
                     <p className="text-gray-600">Florence, Mississippi</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
                   <div className="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-6 h-6 text-orange-500" />
+                    <Mail className="w-6 h-6 text-[#00A0D2]" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-[#1e3a5f] mb-1">Email</h4>
+                    <h4 className="font-bold text-[#5A5A5A] mb-1">Email</h4>
                     <a
                       href="mailto:dispatch@khcllogistics.com"
-                      className="text-gray-600 hover:text-orange-500 transition-colors"
+                      className="text-gray-600 hover:text-[#00A0D2] transition-colors"
                     >
                       dispatch@khcllogistics.com
                     </a>
@@ -501,10 +538,10 @@ export default function Home() {
                 </div>
                 <div className="flex gap-4">
                   <div className="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center flex-shrink-0">
-                    <Calendar className="w-6 h-6 text-orange-500" />
+                    <Calendar className="w-6 h-6 text-[#00A0D2]" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-[#1e3a5f] mb-1">Hours</h4>
+                    <h4 className="font-bold text-[#5A5A5A] mb-1">Hours</h4>
                     <p className="text-gray-600">
                       Monday - Friday: 8AM - 6PM CST
                       <br />
@@ -516,7 +553,7 @@ export default function Home() {
             </div>
 
             <div className="bg-white p-8 lg:p-10 rounded-3xl shadow-xl">
-              <h3 className="text-xl font-bold text-[#1e3a5f] mb-2">
+              <h3 className="text-xl font-bold text-[#5A5A5A] mb-2">
                 Request a Quote
               </h3>
               <p className="text-gray-600 mb-8">
@@ -533,7 +570,7 @@ export default function Home() {
                     <input
                       type="text"
                       placeholder="John Smith"
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-500 focus:ring-4 focus:ring-orange-500/10 outline-none transition-all"
+                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-[#00A0D2] focus:ring-4 focus:ring-[#00A0D2]/10 outline-none transition-all"
                     />
                   </div>
                   <div>
@@ -543,7 +580,7 @@ export default function Home() {
                     <input
                       type="text"
                       placeholder="Company Name"
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-500 focus:ring-4 focus:ring-orange-500/10 outline-none transition-all"
+                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-[#00A0D2] focus:ring-4 focus:ring-[#00A0D2]/10 outline-none transition-all"
                     />
                   </div>
                 </div>
@@ -555,7 +592,7 @@ export default function Home() {
                     <input
                       type="email"
                       placeholder="john@company.com"
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-500 focus:ring-4 focus:ring-orange-500/10 outline-none transition-all"
+                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-[#00A0D2] focus:ring-4 focus:ring-[#00A0D2]/10 outline-none transition-all"
                     />
                   </div>
                   <div>
@@ -565,7 +602,7 @@ export default function Home() {
                     <input
                       type="tel"
                       placeholder="(555) 123-4567"
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-500 focus:ring-4 focus:ring-orange-500/10 outline-none transition-all"
+                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-[#00A0D2] focus:ring-4 focus:ring-[#00A0D2]/10 outline-none transition-all"
                     />
                   </div>
                 </div>
@@ -577,7 +614,7 @@ export default function Home() {
                     <input
                       type="text"
                       placeholder="Dallas, TX"
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-500 focus:ring-4 focus:ring-orange-500/10 outline-none transition-all"
+                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-[#00A0D2] focus:ring-4 focus:ring-[#00A0D2]/10 outline-none transition-all"
                     />
                   </div>
                   <div>
@@ -587,7 +624,7 @@ export default function Home() {
                     <input
                       type="text"
                       placeholder="Atlanta, GA"
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-500 focus:ring-4 focus:ring-orange-500/10 outline-none transition-all"
+                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-[#00A0D2] focus:ring-4 focus:ring-[#00A0D2]/10 outline-none transition-all"
                     />
                   </div>
                 </div>
@@ -595,7 +632,7 @@ export default function Home() {
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Equipment Type
                   </label>
-                  <select className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-500 focus:ring-4 focus:ring-orange-500/10 outline-none transition-all bg-white">
+                  <select className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-[#00A0D2] focus:ring-4 focus:ring-[#00A0D2]/10 outline-none transition-all bg-white">
                     <option value="">Select equipment type...</option>
                     <option value="dry-van">Dry Van</option>
                     <option value="flatbed">Flatbed</option>
@@ -612,12 +649,12 @@ export default function Home() {
                   <textarea
                     rows={4}
                     placeholder="Commodity, weight, dimensions, pickup date, any special requirements..."
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-500 focus:ring-4 focus:ring-orange-500/10 outline-none transition-all resize-none"
+                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-[#00A0D2] focus:ring-4 focus:ring-[#00A0D2]/10 outline-none transition-all resize-none"
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 bg-orange-500 text-white rounded-xl font-semibold hover:bg-orange-600 transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-orange-500/30"
+                  className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#00A0D2] text-white rounded-xl font-semibold hover:bg-[#0088B5] transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#00A0D2]/30"
                 >
                   Submit Request
                   <Send className="w-5 h-5" />
@@ -629,15 +666,18 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#0f2744] text-white py-16">
+      <footer className="bg-[#3D3D3D] text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-12 mb-12">
             <div>
               <a href="#" className="flex items-center gap-2 mb-4">
-                <div className="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center text-white font-bold text-lg">
-                  K
-                </div>
-                <span className="font-bold text-xl">KHCL Logistics</span>
+                <Image
+                  src="/logo.jpg"
+                  alt="KHCL Logistics"
+                  width={140}
+                  height={45}
+                  className="h-10 w-auto brightness-0 invert"
+                />
               </a>
               <p className="text-white/70 max-w-xs">
                 Your trusted freight brokerage partner. Moving freight across
@@ -645,14 +685,14 @@ export default function Home() {
               </p>
             </div>
             <div>
-              <h4 className="text-orange-500 font-semibold uppercase tracking-wider text-sm mb-5">
+              <h4 className="text-[#00A0D2] font-semibold uppercase tracking-wider text-sm mb-5">
                 Quick Links
               </h4>
               <ul className="space-y-3">
                 <li>
                   <a
                     href="#services"
-                    className="text-white/70 hover:text-orange-500 transition-colors"
+                    className="text-white/70 hover:text-[#00A0D2] transition-colors"
                   >
                     Our Services
                   </a>
@@ -660,7 +700,7 @@ export default function Home() {
                 <li>
                   <a
                     href="#why-us"
-                    className="text-white/70 hover:text-orange-500 transition-colors"
+                    className="text-white/70 hover:text-[#00A0D2] transition-colors"
                   >
                     Why Choose Us
                   </a>
@@ -668,7 +708,7 @@ export default function Home() {
                 <li>
                   <a
                     href="#contact"
-                    className="text-white/70 hover:text-orange-500 transition-colors"
+                    className="text-white/70 hover:text-[#00A0D2] transition-colors"
                   >
                     Get a Quote
                   </a>
@@ -676,7 +716,7 @@ export default function Home() {
                 <li>
                   <a
                     href="#contact"
-                    className="text-white/70 hover:text-orange-500 transition-colors"
+                    className="text-white/70 hover:text-[#00A0D2] transition-colors"
                   >
                     Contact Us
                   </a>
@@ -684,14 +724,14 @@ export default function Home() {
               </ul>
             </div>
             <div>
-              <h4 className="text-orange-500 font-semibold uppercase tracking-wider text-sm mb-5">
+              <h4 className="text-[#00A0D2] font-semibold uppercase tracking-wider text-sm mb-5">
                 Services
               </h4>
               <ul className="space-y-3">
                 <li>
                   <a
                     href="#services"
-                    className="text-white/70 hover:text-orange-500 transition-colors"
+                    className="text-white/70 hover:text-[#00A0D2] transition-colors"
                   >
                     Dry Van
                   </a>
@@ -699,7 +739,7 @@ export default function Home() {
                 <li>
                   <a
                     href="#services"
-                    className="text-white/70 hover:text-orange-500 transition-colors"
+                    className="text-white/70 hover:text-[#00A0D2] transition-colors"
                   >
                     Flatbed
                   </a>
@@ -707,7 +747,7 @@ export default function Home() {
                 <li>
                   <a
                     href="#services"
-                    className="text-white/70 hover:text-orange-500 transition-colors"
+                    className="text-white/70 hover:text-[#00A0D2] transition-colors"
                   >
                     Refrigerated
                   </a>
@@ -715,7 +755,7 @@ export default function Home() {
                 <li>
                   <a
                     href="#services"
-                    className="text-white/70 hover:text-orange-500 transition-colors"
+                    className="text-white/70 hover:text-[#00A0D2] transition-colors"
                   >
                     Specialized Freight
                   </a>
@@ -738,7 +778,7 @@ export default function Home() {
       {/* Scroll to Top */}
       <button
         onClick={scrollToTop}
-        className={`fixed bottom-8 right-8 w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center shadow-lg transition-all hover:bg-orange-600 hover:-translate-y-1 ${
+        className={`fixed bottom-8 right-8 w-12 h-12 bg-[#00A0D2] text-white rounded-full flex items-center justify-center shadow-lg transition-all hover:bg-[#0088B5] hover:-translate-y-1 ${
           showScrollTop
             ? "opacity-100 visible"
             : "opacity-0 invisible pointer-events-none"

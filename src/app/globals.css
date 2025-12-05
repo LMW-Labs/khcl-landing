@@ -1,10 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --primary: #1e3a5f;
-  --primary-dark: #0f2744;
-  --accent: #f97316;
-  --accent-hover: #ea580c;
+  /* KHCL Brand Colors */
+  --primary: #5A5A5A;        /* Charcoal gray from logo text */
+  --primary-dark: #3D3D3D;   /* Darker gray */
+  --accent: #00A0D2;         /* Cyan blue from logo */
+  --accent-hover: #0088B5;   /* Darker cyan */
+  --taupe: #A89F91;          /* Warm gray from swoosh */
+  --taupe-light: #C4BDB2;    /* Lighter taupe */
 }
 
 html {
