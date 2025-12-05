@@ -23,6 +23,8 @@ import {
   Send,
   Shield,
   Phone,
+  ExternalLink,
+  LogIn,
 } from "lucide-react";
 
 export default function Home() {
@@ -145,7 +147,7 @@ export default function Home() {
             </a>
 
             {/* Desktop Nav */}
-            <div className="hidden md:flex items-center gap-8">
+            <div className="hidden md:flex items-center gap-6">
               <a
                 href="#services"
                 className={`font-medium transition-colors hover:text-[#00A0D2] ${
@@ -169,6 +171,17 @@ export default function Home() {
                 }`}
               >
                 Contact
+              </a>
+              <a
+                href="https://freightflow-tms.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`font-medium transition-colors hover:text-[#00A0D2] flex items-center gap-1 ${
+                  scrolled ? "text-[#5A5A5A]" : "text-white"
+                }`}
+              >
+                Client Portal
+                <ExternalLink className="w-4 h-4" />
               </a>
               <a
                 href="#contact"
@@ -224,6 +237,16 @@ export default function Home() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Contact
+              </a>
+              <a
+                href="https://freightflow-tms.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-[#00A0D2] font-medium"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <LogIn className="w-4 h-4" />
+                Client Portal
               </a>
               <a
                 href="#contact"
@@ -495,6 +518,54 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Client Portal CTA */}
+      <section className="py-16 bg-white border-y border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-gradient-to-r from-[#00A0D2] to-[#0088B5] rounded-3xl p-8 md:p-12 relative overflow-hidden">
+            {/* Decorative elements */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2" />
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
+
+            <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
+              <div className="text-center lg:text-left">
+                <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur px-4 py-1.5 rounded-full text-white text-sm font-medium mb-4">
+                  <Package className="w-4 h-4" />
+                  Powered by FreightFlow
+                </div>
+                <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
+                  Already a KHCL Customer?
+                </h2>
+                <p className="text-white/90 text-lg max-w-xl">
+                  Log in to FreightFlow to track your shipments in real-time, view documents,
+                  and stay updated on all your active loads.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="https://freightflow-tms.vercel.app/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-[#00A0D2] rounded-xl font-semibold hover:bg-gray-50 transition-all hover:-translate-y-0.5 hover:shadow-xl"
+                >
+                  <LogIn className="w-5 h-5" />
+                  Track Your Loads
+                </a>
+                <a
+                  href="https://freightflow-tms.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-transparent text-white border-2 border-white/50 rounded-xl font-semibold hover:bg-white/10 transition-colors"
+                >
+                  Learn About FreightFlow
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -715,10 +786,13 @@ export default function Home() {
                 </li>
                 <li>
                   <a
-                    href="#contact"
-                    className="text-white/70 hover:text-[#00A0D2] transition-colors"
+                    href="https://freightflow-tms.vercel.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white/70 hover:text-[#00A0D2] transition-colors inline-flex items-center gap-1"
                   >
-                    Contact Us
+                    Client Portal (FreightFlow)
+                    <ExternalLink className="w-3 h-3" />
                   </a>
                 </li>
               </ul>
