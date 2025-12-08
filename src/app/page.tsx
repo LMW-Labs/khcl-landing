@@ -280,7 +280,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="min-h-screen bg-gradient-to-br from-[#5A5A5A] to-[#3D3D3D] relative overflow-hidden flex items-center">
+      <section className="min-h-screen bg-gradient-to-br from-[#0a0a0a] to-[#1a1a1a] relative overflow-hidden flex items-center">
         {/* Decorative swoosh element inspired by logo */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-0 right-0 w-[80%] h-[60%] opacity-10">
@@ -361,7 +361,7 @@ export default function Home() {
       </section>
 
       {/* Credentials Bar */}
-      <div className="bg-[#3D3D3D] py-6">
+      <div className="bg-[#111111] py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center items-center gap-6 md:gap-12 text-white/80 text-sm">
             <div className="flex items-center gap-2">
