@@ -59,7 +59,7 @@ export const metadata: Metadata = {
       "Your trusted freight broker connecting shippers with reliable carriers. Dry van, flatbed, reefer, and specialized freight solutions across the USA.",
     images: [
       {
-        url: "/og-image.png",
+        url: "/logo.jpg",
         width: 1200,
         height: 630,
         alt: "KHCL Logistics - Freight Brokerage",
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     title: "KHCL Logistics | Freight Brokerage Solutions",
     description:
       "Trusted freight broker in Florence, MS. Dry van, flatbed, reefer & specialized freight. Get your free quote today.",
-    images: ["/og-image.png"],
+    images: ["/logo.jpg"],
   },
   alternates: {
     canonical: "https://khcllogistics.com",

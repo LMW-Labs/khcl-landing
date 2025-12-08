@@ -185,7 +185,7 @@ export default function Home() {
                 Contact
               </a>
               <a
-                href="https://freightflow-tms.vercel.app"
+                href="https://vectrloadai-tms.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`font-medium transition-colors hover:text-[#00A0D2] flex items-center gap-1 ${
@@ -258,7 +258,7 @@ export default function Home() {
                 Contact
               </a>
               <a
-                href="https://freightflow-tms.vercel.app"
+                href="https://vectrloadai-tms.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-[#00A0D2] font-medium"
@@ -697,7 +697,7 @@ export default function Home() {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="https://freightflow-tms.vercel.app/login"
+                  href="https://vectrloadai-tms.vercel.app/login"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-[#00A0D2] rounded-xl font-semibold hover:bg-gray-50 transition-all hover:-translate-y-0.5 hover:shadow-xl"
@@ -706,7 +706,7 @@ export default function Home() {
                   Track Your Loads
                 </a>
                 <a
-                  href="https://freightflow-tms.vercel.app"
+                  href="https://vectrloadai-tms.vercel.app"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-transparent text-white border-2 border-white/50 rounded-xl font-semibold hover:bg-white/10 transition-colors"
@@ -940,7 +940,7 @@ export default function Home() {
                 </li>
                 <li>
                   <a
-                    href="https://freightflow-tms.vercel.app"
+                    href="https://vectrloadai-tms.vercel.app"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-white/70 hover:text-[#00A0D2] transition-colors inline-flex items-center gap-1"
